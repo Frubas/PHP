@@ -12,6 +12,9 @@ include ('include.php');
 	<meta name="keywords" content="cms, prostota, wydajność, opensource">
 	<meta name="description" content="Tutaj wpisz opis swojej strony">
 	<link rel="stylesheet" href="styl.css">
+	<link href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 </head>
 <body><center>
 <a href="admin.php">logowanie</a></center>
@@ -35,7 +38,9 @@ include ('include.php');
 			<aside>
 				<nav>
 					<h3>Menu</h3>
-					<?php echo menu_from_db($polaczenie); ?>
+					<table>
+						<?php echo menu_from_db($polaczenie); ?>
+					</table>
 				</nav>
 				<section>
 					<h3>Reklamy</h3>
@@ -58,6 +63,8 @@ include ('include.php');
 <?php $polaczenie -> close(); ?>
 
 
-					
-			
-			
+<script>
+$(function() {
+	$( "tbody" ).sortable();
+});
+</script>
