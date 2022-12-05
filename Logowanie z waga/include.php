@@ -3,7 +3,7 @@ function menu_from_db($connection){
 	$menu = '';	
 	if ($result = $connection -> query("SELECT * FROM podstrony ORDER BY waga ASC")) {
 		while($wiersz = mysqli_fetch_assoc($result)){
-                $menu = $menu.'<a href="index.php?id='.$wiersz['id'].'">'.$wiersz['nazwapodstr']."</a><br>";
+                $menu = $menu.'<tr><td><a href="index.php?id='.$wiersz['id'].'">'.$wiersz['nazwapodstr']."</a></td></td>";
                 }
 		$result -> free_result();
 		}
