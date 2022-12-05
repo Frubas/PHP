@@ -66,9 +66,10 @@ login_action($polaczenie);
 
         echo '<br><input type="submit"></form>';
         echo '</form> <br>';
+
+    }
         echo login_form();
         echo '<a href="index.php">Powrót do strony głównej</a>';
-    }
     ?>
     
 </body>
