@@ -38,7 +38,7 @@ login_action($polaczenie);
 
         echo '<h1>Usuwanie wpisu:</h1>
         <form action="remove.php" method="post">
-        Wybierz tutyl:';
+        Wybierz tytul:';
         echo '<select name="podstrona" id="podstrona">';
         $result = $polaczenie->query("SELECT * FROM podstrony");
         while ($row = $result->fetch_assoc()) {
@@ -53,7 +53,7 @@ login_action($polaczenie);
 
         echo '<h1>Edytuj wpisu:</h1>
         <form action="edit.php" method="post">
-        Wybierz tutul:';
+        Wybierz tytul:';
         echo '<select name="tytul" id="podstrona">';
         $result = $polaczenie->query("SELECT * FROM podstrony");
         while ($row = $result->fetch_assoc()) {
